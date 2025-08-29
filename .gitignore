@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# IDE/editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Build / dist
+build/
+dist/
+*.egg-info/
+
+# RL outputs
+tb_dino/
+videos/
+checkpoints/
+
+# Large binaries
+*.dll
+*.lib
+*.pyd

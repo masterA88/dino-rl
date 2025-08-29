@@ -1,0 +1,6 @@
+gymnasium==1.2.0
+pygame
+stable-baselines3[extra]
+torch
+opencv-python
+numpy
