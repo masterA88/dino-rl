@@ -207,37 +207,5 @@ Here’s the breakdown of the methods:
 
 In short: a **CNN-based PPO agent** learns by trial-and-error to maximize survival, balancing exploration and exploitation.
 
-## 🧠 How It Works (ML Methods)
 
-This project uses **Reinforcement Learning (RL)** with **Proximal Policy Optimization (PPO)**, a popular deep RL algorithm.  
-Here’s the breakdown of the methods:
 
-1. **Reinforcement Learning (RL)**  
-   - The Dino (agent) interacts with the game (environment).  
-   - At each step, it chooses an action (jump, duck, or do nothing).  
-   - It receives a reward:  
-     - +1 for surviving a step  
-     - −100 if it crashes  
-     - −0.01 penalty for spamming actions  
-   - Goal: maximize long-term reward (stay alive as long as possible).
-
-2. **Policy Gradient Method (PPO)**  
-   - Instead of estimating Q-values, PPO directly learns a **policy network** that outputs probabilities of each action.  
-   - PPO uses a **clipped objective** to avoid overly large updates, making training stable.
-
-3. **Actor–Critic Architecture**  
-   - **Actor (policy network):** decides the next action.  
-   - **Critic (value network):** estimates how good the current state is (expected future reward).  
-   - Training both together stabilizes learning.
-
-4. **Convolutional Neural Networks (CNNs)**  
-   - The input is an **84×84 grayscale game frame** (stacked over 4 timesteps for motion).  
-   - A CNN extracts spatial & motion features (like obstacle shapes, Dino position).  
-   - These features feed into the actor and critic networks.
-
-5. **Stability Techniques**  
-   - **Generalized Advantage Estimation (GAE):** reduces variance in reward estimation.  
-   - **Entropy bonus:** encourages exploration (avoids getting stuck in repetitive actions).  
-   - **Reward shaping:** survival reward, crash penalty, and action penalties guide faster learning.
-
-👉 In short: a **CNN-based PPO agent** learns by trial-and-error to maximize survival, balancing exploration and exploitation.
